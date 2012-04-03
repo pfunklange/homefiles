@@ -12,6 +12,7 @@ syntax on
 set number
 set incsearch
 set hlsearch
+set nocompatible
 
 " set specific drupal vim options
 if has("autocmd")
