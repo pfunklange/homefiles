@@ -1,0 +1,28 @@
+#! /bin/sh
+_git()
+{
+  local cur prev opts
+  COMPREPLY=()
+  cur="${COMP_WORDS[COMP_CWORD]}"
+  prev="${COMP_WORDS[COMP_CWORD-1]}"
+  opts="add bisect branch checkout clone commit diff fetch grep help init log merge mv pull push rebase reset rm show status tag"
+
+  case "${prev}" in 
+    git)
+      COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+      return 0
+      ;;
+    checkout)
+      opts=`git branch | grep -o '\w\+$'`
+      COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+      return 0
+      ;;
+    *)
+      COMPREPLY=( $(compgen -f ${cur}) )
+      return 0
+    ;;
+  esac
+
+}
+complete -F _git git
+
