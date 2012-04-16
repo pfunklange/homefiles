@@ -28,6 +28,11 @@ if has("autocmd")
   augroup install
   autocmd BufRead *.install set filetype=php
   augroup END
+ 
+  "nginx files
+  augroup nginx
+  autocmd BufRead *.nginx.conf set filetype=nginx
+  augroup END
 endif
 
 " php autocomplete
