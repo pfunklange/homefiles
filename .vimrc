@@ -28,6 +28,11 @@ if has("autocmd")
   augroup install
   autocmd BufRead *.install set filetype=php
   augroup END
+ 
+  "nginx files
+  augroup nginx
+  autocmd BufRead *.nginx.conf set filetype=nginx
+  augroup END
 endif
 
 " php autocomplete
@@ -69,3 +74,9 @@ hi Comment ctermfg=darkblue
 
 hi Folded ctermfg=yellow
 hi Folded ctermbg=black
+
+if &term == "screen"
+  set t_ts=k
+  set t_fs=\
+  set title
+endif
