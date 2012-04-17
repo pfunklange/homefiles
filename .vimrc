@@ -74,3 +74,9 @@ hi Comment ctermfg=darkblue
 
 hi Folded ctermfg=yellow
 hi Folded ctermbg=black
+
+if &term == "screen"
+  set t_ts=k
+  set t_fs=\
+  set title
+endif
