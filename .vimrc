@@ -75,6 +75,7 @@ hi Comment ctermfg=darkblue
 hi Folded ctermfg=yellow
 hi Folded ctermbg=black
 
+let &titlestring = "vim(".expand("%:t").")"
 if &term == "screen"
   set t_ts=k
   set t_fs=\
