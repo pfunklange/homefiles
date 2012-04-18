@@ -6,10 +6,10 @@ fi
 
 case $TERM in
 xterm*|rxvt*)
-  PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}[`basename ${PWD}`]\007"'
+  PS1="\[\e]0;\u@\h: \W\a\]$PS1"
   ;;
 screen*)
-  PROMPT_COMMAND='echo -ne "\033k[`basename ${PWD}`]\033\\"'
+  PS1='\[\033k[\W]\033\\\]'"$PS1"
   ;;
 *)
   ;;
