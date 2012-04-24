@@ -1,5 +1,5 @@
 
-for file in .bashrc.d/completions/*.bash .bashrc.d/*.sh .bashrc.d/*.bash; do
+for file in ~/.bashrc.d/completions/*.bash ~/.bashrc.d/*.sh ~/.bashrc.d/*.bash; do
   source $file
 done
 
