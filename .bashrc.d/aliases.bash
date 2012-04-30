@@ -2,6 +2,8 @@
 alias cdup="while [ ! -f index.php ]; do cd ..; done"
 alias uusers="users | grep -o '\w\+' | uniq"
 alias watchdog="tail -f /tmp/watchdog.log"
+alias ll="ls -l"
+alias la="ls -a"
 
 # BSD/GNU command differences
 case `uname` in
