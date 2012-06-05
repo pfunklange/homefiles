@@ -14,3 +14,5 @@ Darwin)
   alias ls="ls --color=auto"
   ;;
 esac
+
+alias cake="[ -f ./cake/console/cake ] && ./cake/console/cake"
