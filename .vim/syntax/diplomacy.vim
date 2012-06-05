@@ -2,10 +2,19 @@
 
 syn keyword DiplomacyUnitType contained A F
 syn keyword DiplomacyOrderType contained C S H B
-syn match DiplomacyOrderType contained "->"
+syn match   DiplomacyOrderType contained "->"
 syn keyword DiplomacyCoast contained sc ec nc
-syn keyword DiplomacySpace contained Lon Edi Yor Lvp Bre Pic Par Bur Mar 
-syn keyword DiplomacySpace contained MAO NAO EMS
+syn keyword DiplomacySpace contained Lon Edi Yor Lvp Cly Wal
+syn keyword DiplomacySpace contained Bre Pic Par Bur Mar Gas
+syn keyword DiplomacySpace contained Ruh Kie Mun Ber Sil Pru
+syn keyword DiplomacySpace contained Pie Ven Tus Rom Nap Apu
+syn keyword DiplomacySpace contained Bud Tri Vie Boh Tyr Alb
+syn keyword DiplomacySpace contained StP Mos Sev War Ukr Lvn
+syn keyword DiplomacySpace contained Con Ank Smy Bul Arm Syr
+syn keyword DiplomacySpace contained Spa Por Naf Tun Gre Ser
+syn keyword DiplomacySpace contained Bel Hol Nor Swe Rum Gal
+syn keyword DiplomacySpace contained Fin
+syn keyword DiplomacySpace contained MAO EMS WMS TYS ION GoL
 
 syn match DiplomacyMoveOrder "[AF]\s\+\a\+\s*->\s*\a\+" contains=DiplomacyUnitType,DiplomacyOrderType,DiplomacySpace
 syn match DiplomacySupportOrder "[AF]\s\+\a\+\s\+S\s\+.*" contains=DiplomacyUnitType,DiplomacyOrderType,DiplomacySpace,DiplomacyMoveOrder,DiplomacyHoldOrder
