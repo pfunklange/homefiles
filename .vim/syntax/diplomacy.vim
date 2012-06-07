@@ -1,8 +1,11 @@
 " Diplomacy orders syntax file
 
-syn keyword DiplomacyUnitType contained A F
-syn keyword DiplomacyOrderType contained C S H B
-syn match   DiplomacyOrderType contained "->"
+syn match DiplomacyError "\S\+"
+syn keyword DiplomacyUnitType contained A[rmy] F[leet]
+syn keyword DiplomacyOrderType contained C[onvoys] S[upports] H[olds] B[uild]
+syn match   DiplomacyOrderType contained "->\?"
+syn keyword DiplomacySeason contained S[pring] F[all] W[inter]
+syn match   DiplomacyYear contained "\(19\)?[0-9]\{2\}"
 syn keyword DiplomacyCoast contained sc ec nc
 syn keyword DiplomacySpace contained Lon Edi Yor Lvp Cly Wal
 syn keyword DiplomacySpace contained Bre Pic Par Bur Mar Gas
@@ -22,6 +25,7 @@ syn match DiplomacyConvoyOrder "[AF]\s\+\a\+\s\+C\s\+.*" contains=DiplomacyUnitT
 syn match DiplomacyHoldOrder "[AF]\s\+\a\+\s\+H" contains=DiplomacyUnitType,DiplomacyOrderType,DiplomacySpace
 syn match DiplomacyBuildOrder "B\s\+[AF]\s\+\a\+" contains=DiplomacyUnitType,DiplomacyOrderType,DiplomacySpace
 
+
 hi def link DiplomacyOrderType Include
 hi def link DiplomacyUnitType Constant
 hi def link DiplomacySpace Identifier
@@ -30,5 +34,6 @@ hi def link DiplomacyHoldOrder Statement
 hi def link DiplomacySupportOrder Statement
 hi def link DiplomacyConvoyOrder Statement
 hi def link DiplomacyBuildOrder Statement
+hi def link DiplomacyError Error
 
 let b:current_syntax = "diplomacy"
