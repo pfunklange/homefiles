@@ -33,6 +33,11 @@ if has("autocmd")
   augroup nginx
   autocmd BufRead *.nginx.conf set filetype=nginx
   augroup END
+
+  "Cake files
+  augroup cake
+  autocmd BufRead *.ctp set filetype=php
+  augroup END
 endif
 
 " php autocomplete
