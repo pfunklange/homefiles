@@ -3,6 +3,16 @@ tcolor="bldred";
 [ -f /etc/redhat-release ] && tcolor="bldpur";
 uname -v | grep -q Ubuntu && tcolor="bldblk";
 uname | grep -q Darwin && tcolor="bldblu";
+case `uname -n` in
+  reporting*)
+    tcolor="bldred"
+    ;;
+  bacon*)
+    tcolor="bldylw"
+    ;;
+  *)
+    ;;
+esac
 
 if [ $(type -t __git_ps1) == 'function' ]; then
   export GIT_PS1_SHOWDIRTYSTATE=1
