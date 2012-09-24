@@ -37,3 +37,8 @@ function txt {
   echo "\[${!1}\]$2\[$txtrst\]"
 
 }
+
+function hashcolor {
+  md5=`md5 -q -s "$1"`
+
+}
