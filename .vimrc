@@ -87,3 +87,6 @@ if &term == "screen"
   set t_fs=\
   set title
 endif
+
+
+set printoptions=paper:letter

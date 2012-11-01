@@ -15,4 +15,5 @@ Darwin)
   ;;
 esac
 
-alias cake="[ -f ./cake/console/cake ] && ./cake/console/cake"
+alias cake="[ -f ../cake/console/cake ] && ../cake/console/cake"
+alias drush="[ -f ./sites/all/modules/drush/drush ] && ./sites/all/modules/drush/drush" 
