@@ -44,6 +44,7 @@ endif
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType php set foldmethod=marker
 autocmd FileType php set foldmarker={,}
+autocmd FileType php set nowrap
 
 function! PyFold(lnum)
   let line = getline(a:lnum)
