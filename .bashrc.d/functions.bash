@@ -5,3 +5,5 @@ function cdfind {
     cd $dir; break
   done
 }
+
+function hurl { curl -LD - -o /dev/null $@; }
