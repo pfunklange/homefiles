@@ -7,3 +7,10 @@ function cdfind {
 }
 
 function hurl { curl -LD - -o /dev/null $@; }
+
+function git-clean-branches {
+  branches=`git branch --merged | grep -v '^[*]'`
+  for branch in $branches; do
+    git branch -d $branch && git push origin :$branch
+  done
+}
