@@ -14,3 +14,11 @@ function git-clean-branches {
     git branch -d $branch && git push origin :$branch
   done
 }
+
+function random-string {
+  count=128
+  class='[:print:]'
+  [ $1 -gt 0 ] && count=$1
+  [ $2 ] && class=$2
+  head -c $count /dev/urandom | tr -cd $class
+}
