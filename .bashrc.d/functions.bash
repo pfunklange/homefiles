@@ -9,7 +9,7 @@ function cdfind {
 function hurl { curl -LD - -o /dev/null $@; }
 
 function git-clean-branches {
-  branches=`git branch --merged | grep -v '^[*]'`
+  branches=`git branch --merged | grep -v '^[*]' | grep '^  pat-'`
   for branch in $branches; do
     git branch -d $branch && git push origin :$branch
   done

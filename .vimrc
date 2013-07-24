@@ -13,6 +13,7 @@ set number
 set incsearch
 set hlsearch
 set nocompatible
+set ruler
 
 " set specific drupal vim options
 if has("autocmd")
