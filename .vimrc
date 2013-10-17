@@ -39,6 +39,12 @@ if has("autocmd")
   augroup cake
   autocmd BufRead *.ctp set filetype=php
   augroup END
+
+  "Capistrano files
+  augroup capfile
+  autocmd BufRead capfile set filetype=ruby
+  augroup END
+
 endif
 
 " php autocomplete
