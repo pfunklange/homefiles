@@ -7,6 +7,7 @@ function cdfind {
 }
 
 function hurl { curl -LD - -o /dev/null $@; }
+function rurl { curl -sL -w "%{http_code} %{url_effective}\\n" -o /dev/null $@; }
 
 function git-clean-branches {
   branches=`git branch --merged | grep -v '^[*]' | grep '^  pat-'`
